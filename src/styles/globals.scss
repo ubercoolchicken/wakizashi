@@ -1,0 +1,146 @@
+// Importing Tailwind Utility files
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// Importing Style Guides, to modify go-to 'styles/_style-guides.scss'
+@import "./_style-guides.scss";
+
+// Importing mixins, to modify breakpoints go-to 'styles/mixins.scss'
+@import "./mixins.scss";
+
+html {
+	margin: 0;
+	padding: 0;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	font: 112.5%/1.45em georgia, serif, sans-serif;
+	scroll-behavior: smooth;
+	box-sizing: border-box;
+	overflow-y: scroll;
+	background-color: $background-color;
+	::selection {
+		background: $selector-color; /* WebKit/Blink Browsers */
+	}
+	::-moz-selection {
+		background: $selector-color; /* Gecko Browsers */
+	}
+}
+body {
+	margin: 0;
+	padding: 0;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+		Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+	font-weight: normal;
+	word-wrap: break-word;
+	font-kerning: normal;
+	-moz-font-feature-settings: "kern", "liga", "clig", "calt";
+	-ms-font-feature-settings: "kern", "liga", "clig", "calt";
+	-webkit-font-feature-settings: "kern", "liga", "clig", "calt";
+	font-feature-settings: "kern", "liga", "clig", "calt";
+}
+
+// Typography
+
+h1 {
+	font: 1.8rem $font-head;
+	color: $primary-color;
+	padding-bottom: 1.2rem;
+
+	@include for-tablet-up {
+		font: 2rem $font-head;
+	}
+	@include for-desktop-up {
+		font: 2.4rem $font-head;
+	}
+}
+h2 {
+	font: 1.6rem $font-head;
+	color: $primary-color;
+	padding-bottom: 1.2rem;
+
+	@include for-tablet-up {
+		font: 2rem $font-head;
+	}
+	@include for-desktop-up {
+		font: 2.2rem $font-head;
+	}
+}
+
+h3 {
+	font: 1.2rem $font-head;
+	color: $primary-color;
+	padding-bottom: 1.2rem;
+
+	@include for-tablet-up {
+		font: 1.4rem $font-head;
+	}
+	@include for-desktop-up {
+		font: 1.6rem $font-head;
+	}
+}
+
+h4 {
+	font: 1.4rem $font-head;
+	color: $primary-color;
+	padding-bottom: 1.2rem;
+
+	@include for-tablet-up {
+		font: 1.8rem $font-head;
+	}
+	@include for-desktop-up {
+		font: 1.8rem $font-head;
+	}
+}
+
+h5 {
+	font: 1.4rem $font-head;
+	color: $primary-color;
+	padding-bottom: 1.2rem;
+
+	@include for-tablet-up {
+		font: 1.8rem $font-head;
+	}
+	@include for-desktop-up {
+		font: 1.8rem $font-head;
+	}
+}
+
+h6 {
+	font: 1.2rem $font-head;
+	color: $primary-color;
+	padding-bottom: 1.2rem;
+
+	@include for-tablet-up {
+		font: 1.2rem $font-head;
+	}
+	@include for-desktop-up {
+		font: 1.2rem $font-head;
+	}
+}
+
+p {
+	font: 1rem $font-body;
+	color: $secondary-color;
+	padding-bottom: 1rem;
+
+	@include for-tablet-up {
+		font: 1.2rem $font-body;
+	}
+	@include for-desktop-up {
+		font: 1.2rem $font-body;
+	}
+}
+
+a {
+	color: $accent-color;
+	text-decoration: none;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}

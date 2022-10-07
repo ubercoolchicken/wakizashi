@@ -1,0 +1,18 @@
+//Breakpoints
+@mixin for-phone-only {
+	@media (max-width: 640px) {
+		@content;
+	}
+}
+
+@mixin for-tablet-up {
+	@media (min-width: 641px) {
+		@content;
+	}
+}
+
+@mixin for-desktop-up {
+	@media (min-width: 1200px) {
+		@content;
+	}
+}
